@@ -24,7 +24,7 @@ class SongsController < ApplicationController
     @song.genre_ids = params[:genres]
     @song.save
 
-    flash[:message] = "Successfully created song."
+    flash[:notice] = "Successfully created song."
     redirect("/songs/#{@song.slug}")
   end
 
@@ -40,7 +40,7 @@ class SongsController < ApplicationController
     @song.genre_ids = params[:genres]
     @song.save
 
-    flash[:message] = "Successfully updated song."
+    flash[:notice] = "Successfully updated song."
     redirect("/songs/#{@song.slug}")
   end
 
